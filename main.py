@@ -1,10 +1,9 @@
 # Import Python libraries
 from PIL import Image
-import numpy as np
 
 # Import structures from other files
 from model import Model
-from image import threshold, greyscale, black, resample, arrayed
+from image import greyscale, black, resample, arrayed
 
 # Print manifest
 print("\033c", end="", flush=True)
