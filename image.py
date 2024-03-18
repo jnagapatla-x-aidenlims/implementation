@@ -32,7 +32,9 @@ def resample(image: Image) -> Image:
     Resizes and resamples via LANCZOS the image
     """
 
-    return image.resize((28, 28), Image.Resampling.LANCZOS)
+    result = Image.new("L", (28, 28), 255)
+    result.paste(image.resize((20, 20), Image.Resampling.BICUBIC), (4, 4))
+    return result
 
 
 def arrayed(image: Image) -> np.ndarray:
